@@ -1,5 +1,5 @@
 <?php 
-  session_start(); // if ap ka agr session set nh ha to pahly home pe nh ajaega agr ap ka session set ha to aaega home pe
+  session_start(); // ap ka agr session set nh ha to pahly home pe nh ajaega agr ap ka session set ha to aaega home pe
   if (!isset($_SESSION['user'])) {
     header("Location:login.php");
   }
