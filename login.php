@@ -1,6 +1,6 @@
 <?php
 require_once("includes/connection.php");
-session_start();
+session_start(); // first of all start session on on top
 if(isset($_POST['sub']))
 {
 
@@ -11,7 +11,7 @@ $query="SELECT * FROM user WHERE email='".$email."' AND password='".$password."'
 $result=mysqli_query($conn,$query);
 if (mysqli_num_rows($result)>0) {
 	$row= mysqli_fetch_assoc($result);
-	$_SESSION['user']=$row;
+	$_SESSION['user']=$row; // session add this 
      if ($row) {
      	header("Location:home.php");
      }
